@@ -4,6 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Run Maven tests
-      run: cd tutorial4-main && mvn clean test
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run Maven tests
+        run: |
+          cd tutorial-main && mvn clean test
