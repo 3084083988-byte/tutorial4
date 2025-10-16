@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run Maven tests
-      run: mvn clean test
+      run: cd tutorial4-main && mvn clean test
