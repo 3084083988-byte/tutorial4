@@ -12,4 +12,4 @@ jobs:
           distribution: 'temurin'
       - name: Run Maven tests
         run: |
-          cd tutorial4-main&& mvn clean test
+          cd tutorial4-main && mvn clean test
